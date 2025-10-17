@@ -1,0 +1,156 @@
+/* General Body Styles */
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Main Container */
+.container {
+    max-width: 960px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: #fff;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+/* Header & Profile Picture */
+header {
+    text-align: center;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid #eee;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #007bff;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #003366;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 0.25rem 0;
+}
+
+.contact-info {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #007bff;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #0056b3;
+}
+
+/* Section Styling */
+section {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+h2 {
+    color: #003366;
+    margin-top: 0;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Core Competencies Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.skill-category h3 {
+    color: #333;
+    font-weight: bold;
+}
+
+.skill-category ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0;
+}
+
+/* Experience & Projects */
+.job, .project, .education-entry {
+    margin-bottom: 1.5rem;
+}
+
+.job:last-child, .project:last-child, .education-entry:last-child {
+    margin-bottom: 0;
+}
+
+h3 {
+    margin-bottom: 0.25rem;
+    color: #0056b3;
+}
+
+.job-info {
+    font-style: italic;
+    color: #555;
+    margin-top: 0;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding-top: 1.5rem;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
