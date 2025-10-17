@@ -6,6 +6,11 @@ body {
     padding: 0;
     background-color: #121212;
     color: #e0e0e0;
+    /* Added background image */
+    background-image: url('https://images.unsplash.com/photo-1550745165-9bc0b252726a?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 /* Main Container */
@@ -13,10 +18,12 @@ body {
     max-width: 960px;
     margin: 2rem auto;
     padding: 1.5rem;
-    background: #1e1e1e;
+    /* Updated background for readability over image */
+    background: rgba(30, 30, 30, 0.9);
     box-shadow: 0 0 20px rgba(0,0,0,0.5);
     border-radius: 8px;
     border: 1px solid #333;
+    backdrop-filter: blur(5px); /* Adds a subtle blur to the background behind the container */
 }
 
 /* Header & Profile Picture */
@@ -59,12 +66,12 @@ h1 {
     margin-bottom: 0.5rem;
 }
 
-/* Adjust link color for readability in dark mode */
-.contact-info a {
+.contact-info a, .project a {
     color: #64b5f6;
     text-decoration: none;
+    font-weight: bold;
 }
-.contact-info a:hover {
+.contact-info a:hover, .project a:hover {
     text-decoration: underline;
 }
 
@@ -82,7 +89,7 @@ h1 {
 
 /* Section Styling */
 section {
-    padding: 1.5rem 0;
+    padding: 1rem 0;
     border-bottom: 1px solid #333;
 }
 
@@ -93,16 +100,52 @@ section:last-of-type {
 h2 {
     color: #ffffff;
     margin-top: 0;
-    border-bottom: 2px solid #64b5f6;
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
 }
+
+/* Collapsible Section Styles */
+.collapsible-header {
+    cursor: pointer;
+    border-bottom: 2px solid #64b5f6;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.collapsible-header:hover {
+    background-color: rgba(100, 181, 246, 0.1);
+}
+
+.collapsible-header::after {
+    content: '+';
+    font-size: 1.8rem;
+    color: #64b5f6;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+}
+
+.collapsible-header.active::after {
+    content: '−';
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.collapsible-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    padding: 0 1rem;
+}
+
 
 /* Core Competencies Grid */
 .skills-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
+    padding-top: 1rem;
 }
 
 .skill-category h3 {
